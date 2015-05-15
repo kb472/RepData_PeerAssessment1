@@ -1,9 +1,9 @@
 ---
 title: 'Reproducible Research: Peer Assessment 1'
 output:
+  pdf_document: default
   html_document:
     keep_md: yes
-  pdf_document: default
 ---
 
 
@@ -141,6 +141,8 @@ sum(is.na(input1$steps)) #2304
 ```
 
 **Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc**
+
+I used a simple while loop that loops over each row, and if the steps has a NA value, I imputed the NA values with the mean of the 5 minute interval. 
 
 
 ```r
